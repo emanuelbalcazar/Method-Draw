@@ -999,7 +999,7 @@ $.SvgCanvas = function (container, config) {
    * @author Carlos Emanuel Balcazar
    */
   this.setTopic = function (topicValue) {
-    let element = selectedElements[0];
+    var element = selectedElements[0];
 
     if (!element) 
       return;
@@ -1012,12 +1012,12 @@ $.SvgCanvas = function (container, config) {
   * @author Carlos Emanuel Balcazar
   */
   this.getTopic = function () {
-    let element = selectedElements[0];
+    var element = selectedElements[0];
 
     if (!element) 
       return '';
 
-    let topic = element.getAttribute("topic");
+    var topic = element.getAttribute("topic");
     return topic;
   }
 

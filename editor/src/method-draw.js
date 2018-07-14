@@ -3544,7 +3544,7 @@
        * Capturo el click del boton para setear el topico ingresado al SVG.
        * @author Carlos Emanuel Balcazar
        */
-      $('#topic_save_button').on('click', () => {
+      $('#topic_save_button').on('click', function () {
         var topicValue = $('#topic_input').val();
         svgCanvas.setTopic(topicValue);
         $.alert('El topico "' + topicValue + '" guardó correctamente');
