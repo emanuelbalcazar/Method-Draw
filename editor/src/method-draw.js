@@ -520,6 +520,10 @@
         multiselected = (elems.length >= 2) ? elems : false;
         if (svgCanvas.elementsAreSame(multiselected)) selectedElement = multiselected[0]
         if (selectedElement != null) {
+          
+          // recupero el topico que tenia la figura seleccionada (si es que la tenia).          
+          $('#topic_input').val(svgCanvas.getTopic() || '');
+
           $('#multiselected_panel').hide()
           updateToolbar();
           if (multiselected.length) {//multiselected elements are the same
