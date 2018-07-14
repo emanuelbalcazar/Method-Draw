@@ -1001,22 +1001,23 @@ $.SvgCanvas = function (container, config) {
   this.setTopic = function (topicValue) {
     let element = selectedElements[0];
 
-    if (!element) return;
+    if (!element) 
+      return;
 
     element.setAttribute("topic", topicValue);
   }
 
   /**
-  * Obtiene el topico al elemento seleccionado en el canvas.
+  * Obtiene el topico del elemento seleccionado en el canvas.
   * @author Carlos Emanuel Balcazar
   */
   this.getTopic = function () {
     let element = selectedElements[0];
 
-    if (!element) return '';
+    if (!element) 
+      return '';
 
     let topic = element.getAttribute("topic");
-    console.log('TOPICO OBTENIDO', topic);
     return topic;
   }
 

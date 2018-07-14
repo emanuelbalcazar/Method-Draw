@@ -520,7 +520,7 @@
         multiselected = (elems.length >= 2) ? elems : false;
         if (svgCanvas.elementsAreSame(multiselected)) selectedElement = multiselected[0]
         if (selectedElement != null) {
-          
+
           // recupero el topico que tenia la figura seleccionada (si es que la tenia).          
           $('#topic_input').val(svgCanvas.getTopic() || '');
 
@@ -3547,6 +3547,7 @@
       $('#topic_save_button').on('click', () => {
         var topicValue = $('#topic_input').val();
         svgCanvas.setTopic(topicValue);
+        $.alert('El topico "' + topicValue + '" guardó correctamente');
       });
 
       window.onbeforeunload = function () {
