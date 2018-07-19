@@ -431,6 +431,7 @@
       var docprops = false;
       var preferences = false;
       var cur_context = '';
+      var iframeisShowing = false;
 
       var saveHandler = function (window, svg) {
         Editor.show_save_warning = false;
@@ -2503,6 +2504,25 @@
         $('#wireframe_rules').text(workarea.hasClass('wireframe') ? rule : "");
       }
 
+      var showSvgIframe = function (e) {
+        if (iframeisShowing) return;
+        flash($('#view_menu'));
+        iframeisShowing = true;
+        $('#tool_source_back').toggle(!iframeisShowing);
+
+        $('#svg_iframe').attr('src', svgCanvas.getSvgString());
+        $('#svg_iframe_view').fadeIn();
+        $('#svg_iframe_textarea').focus().select();
+      };
+
+      var hiddeSvgIframe = function () {
+        $('#svg_iframe_view').hide();
+        iframeisShowing = false;
+        $('#svg_iframe_textarea').blur();
+      };
+
+      hiddeSvgIframe();
+
       var showSourceEditor = function (e, forSaving) {
         if (editingsource) return;
         flash($('#view_menu'));
@@ -3247,6 +3267,11 @@
           { sel: '#tool_italic', fn: clickItalic, evt: 'mousedown', key: [modKey + 'I', true] },
           //{sel:'#sidepanel_handle', fn: toggleSidePanel, key: ['X']},
           { sel: '#copy_save_done', fn: cancelOverlays, evt: 'click' },
+
+          /* added by Carlos Emanuel Balcazar */
+          { sel: '#tool_svg_iframe', fn: showSvgIframe, evt: 'click' },
+          { sel: '#tool_svg_iframe_close', fn: hiddeSvgIframe, evt: 'click' },
+
 
           // Shortcuts not associated with buttons
 

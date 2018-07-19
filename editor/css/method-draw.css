@@ -1197,6 +1197,51 @@ box-shadow: inset 0 3px 10px rgba(255, 255, 255, 0.1),
   padding-right: .3em;
 }
 
+/* added by Carlos Emanuel Balcazar */
+#svg_iframe_view {
+  display: none;
+}
+
+#svg_iframe_view #tool_source_back {
+  position: absolute;
+  bottom: 45px;
+  left: 15px;
+  right: 15px;
+}
+
+#svg_iframe_view #svg_iframe_overlay {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 5;
+}
+
+#svg_iframe_view #svg_iframe_container {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  right: 100px;
+  bottom: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  opacity: 1.0;
+  text-align: center;
+  z-index: 6;
+  padding: 15px 0;
+}
+
+#svg_iframe_view #tool_source_back #tool_svg_iframe_close {
+  display: block;
+  position: absolute;
+  left: 20;
+}
+
+/* end of svg iframe properties */
+
 #svg_source_editor {
   display: none;
 }
