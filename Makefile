@@ -37,7 +37,8 @@ JS_FILES=\
 	lib/requestanimationframe.js \
 	lib/taphold.js \
 	lib/filesaver.js \
-	lib/mqtt-client.js
+	lib/mqtt-client.js \
+	src/mqtt.js
 
 CSS_FILES=\
 	lib/jgraduate/css/jPicker.css \
