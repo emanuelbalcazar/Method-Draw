@@ -36,7 +36,8 @@ JS_FILES=\
 	extensions/ext-shapes.js \
 	lib/requestanimationframe.js \
 	lib/taphold.js \
-	lib/filesaver.js
+	lib/filesaver.js \
+	lib/mqtt-client.js
 
 CSS_FILES=\
 	lib/jgraduate/css/jPicker.css \
