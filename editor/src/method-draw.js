@@ -2504,17 +2504,28 @@
         $('#wireframe_rules').text(workarea.hasClass('wireframe') ? rule : "");
       }
 
+      /**
+       * Muestra el svg en un iframe abriendo un modal (popup)
+       * @param {Event} e
+       * @author Carlos Emanuel Balcazar
+       */
       var showSvgIframe = function (e) {
         if (iframeisShowing) return;
         flash($('#view_menu'));
         iframeisShowing = true;
         $('#tool_source_back').toggle(!iframeisShowing);
 
-        $('#svg_iframe').attr('src', svgCanvas.getSvgString());
+        var stringCanvas = svgCanvas.svgCanvasToString();
+        $('#svg_iframe').empty();
+        $('#svg_iframe').append(stringCanvas);
         $('#svg_iframe_view').fadeIn();
         $('#svg_iframe_textarea').focus().select();
       };
 
+      /**
+       * Oculta el modal que muestra el svg en un iframe
+       * @author Carlos Emanuel Balcazar
+       */
       var hiddeSvgIframe = function () {
         $('#svg_iframe_view').hide();
         iframeisShowing = false;
