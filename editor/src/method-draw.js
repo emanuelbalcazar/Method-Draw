@@ -3583,7 +3583,7 @@
       $('#topic_save_button').on('click', function () {
         var topicValue = $('#topic_input').val();
         svgCanvas.setTopic(topicValue);
-        $.alert('El topico "' + topicValue + '" guardó correctamente');
+        $.alert('El topico "' + topicValue + '" se guardó correctamente');
       });
 
       window.onbeforeunload = function () {

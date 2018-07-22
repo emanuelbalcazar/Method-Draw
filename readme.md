@@ -23,7 +23,7 @@ make release
 
 ## Consigna
 
-La consigna a resolver es:
+La consigna a resolver es la siguiente:
 
 ```
 En base a un editor de SVG basado en HTML y EcmaScript deberá agregar la capacidad de definir atributos del tipo tópico.
