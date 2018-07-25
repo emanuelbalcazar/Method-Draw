@@ -38,6 +38,8 @@ JS_FILES=\
 	lib/taphold.js \
 	lib/filesaver.js \
 	lib/mqtt-client.js \
+	lib/d3-selection.min.js \
+	lib/d3.min.js \
 	src/mqtt.js
 
 CSS_FILES=\
