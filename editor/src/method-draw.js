@@ -2546,20 +2546,20 @@
             console.log('[MQTT] - Me conecte correctamente');
 
             client.subscribe(TOPIC, {
-              onSuccess: function() {
+              onSuccess: function () {
                 console.log('[MQTT] - Me subscribi correctamente al topico', TOPIC);
               },
-              onFailure: function() {
+              onFailure: function () {
                 console.log('[MQTT] - Fallo la subscripcion al topico', TOPIC);
               }
             })
           },
-          onFailure: function(err) {
+          onFailure: function (err) {
             console.log('[MQTT] - Fallo la conexion a mqtt', err);
           }
         });
 
-        client.onMessageArrived = function(message) {
+        client.onMessageArrived = function (message) {
           console.log('[Method Draw] - Llego un nuevo mensaje:', message);
           var selection = d3.select("#svg_iframe").select('svg').selectAll('[topic="' + message.topic + '"]');
           var params = JSON.parse(message.payloadString);

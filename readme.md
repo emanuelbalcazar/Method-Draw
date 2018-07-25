@@ -9,17 +9,8 @@ Las implementaciónes se realizaron para el examen final de la materia de Taller
 
 ## Despliegue
 
-1. Limpiar la carpeta con los archivos generados
+Abrir en el navegador el archivo: `editor/index.html`
 
-```
-make clean
-```
-
-2. Generar editor listo para su distribución
-
-```
-make release
-```
 
 ## Consigna
 
